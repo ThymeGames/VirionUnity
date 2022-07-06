@@ -17,6 +17,9 @@ public class Homing : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (target == null) {
+            return;
+        }
 
         Vector3 target_position = target.position;
         Vector3 direction = target_position - transform.position;
