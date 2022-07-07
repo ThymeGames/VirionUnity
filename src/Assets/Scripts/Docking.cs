@@ -7,11 +7,12 @@ public class Docking : MonoBehaviour
 
     public float repulse = 10f;
     public float repulse_torque = 10f;
+    Animator anim;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        
+        anim = gameObject.GetComponentInParent<Animator>();
     }
 
     // Update is called once per frame
@@ -46,6 +47,7 @@ public class Docking : MonoBehaviour
 
         if (col.gameObject.tag == "BestCellEver") {
             Debug.Log("oh my... here we are!");
+            anim.Play("Docking", -1, 0f);
         }
    
     }

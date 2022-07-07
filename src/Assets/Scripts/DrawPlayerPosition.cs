@@ -8,13 +8,13 @@ public class DrawPlayerPosition : MonoBehaviour
 
     public float world_width = 60f;
     public float world_height = 60f;
-
-    Transform target;
+    public string targetTag;
     Bounds bounds;
+    Transform target;
 
     void Start()
     {
-        target = GameObject.FindWithTag("Player").transform;
+        target = GameObject.FindWithTag(targetTag).transform;
         bounds = gameObject.GetComponentInParent<SpriteRenderer>().bounds;
     }
 

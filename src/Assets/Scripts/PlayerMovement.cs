@@ -86,6 +86,10 @@ public class PlayerMovement : MonoBehaviour
             return;
         }
 
+        if (verticalInput < 0) {
+            verticalInput /= 3;
+        }
+
         Quaternion rotation = transform.rotation;
         rb.AddForce(
             rotation * Vector2.up * impulse * verticalInput,
