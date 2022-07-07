@@ -5,14 +5,18 @@ using UnityEngine;
 public class Homing : MonoBehaviour
 {
 
-    public Transform target;
     public float velocityMagnitude = 1f;
 
     Rigidbody2D rb;
+    Transform target;
 
     void Awake()
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
+    }
+
+    void Start() {
+        target = GameObject.FindWithTag("Player").transform;
     }
 
     void FixedUpdate()
@@ -20,6 +24,8 @@ public class Homing : MonoBehaviour
         if (target == null) {
             return;
         }
+
+        // Debug.Log("Homing to " + target.position.ToString());
 
         Vector3 target_position = target.position;
         Vector3 direction = target_position - transform.position;

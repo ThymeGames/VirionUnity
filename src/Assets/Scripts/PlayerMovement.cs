@@ -12,6 +12,7 @@ public class PlayerMovement : MonoBehaviour
 
     Rigidbody2D rb;
     Animator anim;
+    GameObject dream;
     float timer = 0;
     float time_impulse = 0;
     bool anim_locked = false;
@@ -24,6 +25,19 @@ public class PlayerMovement : MonoBehaviour
         rb = gameObject.GetComponent<Rigidbody2D>();
         anim = gameObject.GetComponent<Animator>();
         anim.Play("ImpulseForward", -1, 1f);
+
+        foreach(Transform child in transform)
+        {
+                if(child.tag == "Dream")
+                {
+                    dream = child.gameObject;
+                }
+        }    
+           
+    }
+
+    void Start() {
+        Destroy(dream, 5f);
     }
 
     // Update is called once per frame
@@ -39,7 +53,7 @@ public class PlayerMovement : MonoBehaviour
                 anim_locked = true;
                 anim.Play("ImpulseForward", -1, 0f);
                 time_impulse = timer + impulse_offset;
-                Debug.Log("anim" + timer.ToString());
+                // Debug.Log("anim" + timer.ToString());
             }
 
         } 
@@ -78,7 +92,7 @@ public class PlayerMovement : MonoBehaviour
             ForceMode2D.Impulse
         );
 
-        Debug.Log("impulse" + timer.ToString());
+        // Debug.Log("impulse" + timer.ToString());
 
         timer = 0;            
         anim_locked = false;

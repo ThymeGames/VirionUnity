@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerCollisions : MonoBehaviour
 {
+
+    public float destruct_time = 1.5f;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,7 +22,16 @@ public class PlayerCollisions : MonoBehaviour
     {
         Debug.Log("OnCollisionEnter2D" + col.gameObject.tag);
         if (col.gameObject.tag == "MacroPredator") {
-            Destroy(gameObject);
+
+            Rigidbody2D rb = gameObject.GetComponent<Rigidbody2D>();
+            // Destroy(rb);
+            rb.isKinematic = true;
+            rb.angularVelocity *= 0;
+            rb.velocity *= 0;
+
+            gameObject.GetComponent<Collider2D>().enabled = false;
+
+            Destroy(gameObject, destruct_time);
             // gameObject.GetComponent<Renderer>().material.color.a = 1.0f;
         }
    
