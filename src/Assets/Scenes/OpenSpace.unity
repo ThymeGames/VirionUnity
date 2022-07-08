@@ -154,7 +154,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 6406274427321095767, guid: 88ab2bd3358ee415fba941ce15922f36, type: 3}
-  radius: 20
+  radius: 22
 --- !u!4 &58764800
 Transform:
   m_ObjectHideFlags: 0
@@ -400,6 +400,10 @@ PrefabInstance:
     - target: {fileID: 8139578183750188107, guid: ae90bc396261044d4ba866537a1d6950, type: 3}
       propertyPath: sounds.Array.data[1].volume
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8906339856625556279, guid: ae90bc396261044d4ba866537a1d6950, type: 3}
+      propertyPath: sounds.Array.data[0].volume
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ae90bc396261044d4ba866537a1d6950, type: 3}

@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Docking : MonoBehaviour
 {
 
+    public float alpha_step = 0.01f;
     public float repulse = 10f;
     public float repulse_torque = 10f;
     Animator anim;
@@ -52,6 +54,8 @@ public class Docking : MonoBehaviour
             Debug.Log("oh my... here we are!");
             audioManager.Play("Whistle");
             anim.Play("Docking", -1, 0f);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            // StartCoroutine(anim.GetComponent<FadeIn>().Fade_());
         }
    
     }
