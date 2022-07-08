@@ -8,11 +8,13 @@ public class Docking : MonoBehaviour
     public float repulse = 10f;
     public float repulse_torque = 10f;
     Animator anim;
+    AudioManager audioManager;
 
     // Start is called before the first frame update
     void Awake()
     {
         anim = gameObject.GetComponentInParent<Animator>();
+        audioManager = gameObject.GetComponent<AudioManager>();
     }
 
     // Update is called once per frame
@@ -42,11 +44,13 @@ public class Docking : MonoBehaviour
         Debug.Log("Player collider with " + tag);
 
         if (col.gameObject.tag == "IntactCell") {
+            audioManager.Play("Batz");
             Repulse();
         }
 
         if (col.gameObject.tag == "BestCellEver") {
             Debug.Log("oh my... here we are!");
+            audioManager.Play("Whistle");
             anim.Play("Docking", -1, 0f);
         }
    

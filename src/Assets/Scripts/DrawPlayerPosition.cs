@@ -21,6 +21,11 @@ public class DrawPlayerPosition : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        if (target == null) {
+            return;
+        }
+
         float x = target.position.x;
         float y = target.position.y;
 

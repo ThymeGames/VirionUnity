@@ -7,9 +7,11 @@ public class PlayerCollisions : MonoBehaviour
 
     public float destruct_time = 1.5f;
     // Start is called before the first frame update
-    void Start()
+    AudioManager audioManager;
+
+    void Awake()
     {
-        
+        audioManager = gameObject.GetComponent<AudioManager>();
     }
 
     // Update is called once per frame
@@ -30,7 +32,7 @@ public class PlayerCollisions : MonoBehaviour
             rb.velocity *= 0;
 
             gameObject.GetComponent<Collider2D>().enabled = false;
-
+            audioManager.Play("Scream");
             Destroy(gameObject, destruct_time);
             // gameObject.GetComponent<Renderer>().material.color.a = 1.0f;
         }
