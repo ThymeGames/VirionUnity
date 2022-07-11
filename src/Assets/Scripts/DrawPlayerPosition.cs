@@ -35,12 +35,12 @@ public class DrawPlayerPosition : MonoBehaviour
         float x_draw = 1.6f * x_percent;  // bounds.extents.x * x_percent;
         float y_draw = 1.6f * y_percent; // bounds.extents.y * y_percent;
 
-        if (false) {
-            Debug.Log("MINIMAP");
-            Debug.Log(x_percent.ToString() + " " + y_percent.ToString());
-            Debug.Log(bounds.extents.x.ToString() + " " + bounds.extents.y.ToString());
-            Debug.Log(x_draw.ToString() + " " + y_draw.ToString());
-        }
+        // if (false) {
+        //     Debug.Log("MINIMAP");
+        //     Debug.Log(x_percent.ToString() + " " + y_percent.ToString());
+        //     Debug.Log(bounds.extents.x.ToString() + " " + bounds.extents.y.ToString());
+        //     Debug.Log(x_draw.ToString() + " " + y_draw.ToString());
+        // }
 
         transform.position = transform.parent.position + new Vector3(x_draw, y_draw);
     }
