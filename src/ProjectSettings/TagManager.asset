@@ -9,6 +9,7 @@ TagManager:
   - Boundaries
   - IntactCell
   - BestCellEver
+  - BufZeroGrav
   layers:
   - Default
   - TransparentFX
