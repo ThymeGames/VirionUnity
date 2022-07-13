@@ -9,7 +9,10 @@ public class FlopaCollisions : MonoBehaviour
         Buff buff = col.GetComponent<Buff>();
         if (buff != null) {
             if (buff.buff_type == "Dash") {
-                gameObject.GetComponent<Dashing>().IncrementCount();
+                bool success = gameObject.GetComponent<Dashing>().IncrementCount();
+                if (success) {
+                    Destroy(col.gameObject);
+                }
             }
         }
 

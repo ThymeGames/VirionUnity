@@ -6,7 +6,8 @@ public class Dashing : MonoBehaviour
 {
     // Start is called before the first frame update
 
-    int count = 3;
+    int count = 1;
+    public int count_max = 4;
     public float dashImpulse = 1f;
 
     Rigidbody2D rb;
@@ -18,7 +19,7 @@ public class Dashing : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown("d") && (count > 0)) {
+        if (Input.GetKeyDown("right") && (count > 0)) {
             DoDash();
             Debug.Log("dashes left " + count.ToString());
         }
@@ -29,8 +30,18 @@ public class Dashing : MonoBehaviour
         count--;
     }
 
-    public void IncrementCount() {
-        count++;
-        Debug.Log("count is incremented");
+    public bool IncrementCount() {
+        if (count < 4) {
+            count++;
+            Debug.Log("count is incremented: " + count.ToString());
+            return true;
+        } else {
+            Debug.Log("Ne lezet uzhe khvatit.");
+            return false;
+        }
+    }
+
+    public int GetCount() {
+        return count;
     }
 }
