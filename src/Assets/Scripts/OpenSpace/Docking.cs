@@ -9,6 +9,8 @@ public class Docking : MonoBehaviour
     public float alpha_step = 0.01f;
     public float repulse = 10f;
     public float repulse_torque = 10f;
+
+    bool _IsNicelyDocked = false;
     Animator anim;
     AudioManager audioManager;
 
@@ -50,14 +52,17 @@ public class Docking : MonoBehaviour
             Repulse();
         }
 
-        if (col.gameObject.tag == "BestCellEver") {
+        if ((col.gameObject.tag == "BestCellEver") && !IsNicelyDocked()) {
             Debug.Log("oh my... here we are!");
             audioManager.Play("Whistle");
+            _IsNicelyDocked = true;
             anim.Play("Docking", -1, 0f);
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-            // StartCoroutine(anim.GetComponent<FadeIn>().Fade_());
         }
    
+    }
+
+    public bool IsNicelyDocked() {
+        return _IsNicelyDocked;
     }
     
 }

@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class SceneMaster : MonoBehaviour
 {
 
-    public string sceneName = "Flopa.unity";
+    public string sceneName = "Flopa";
     public GameObject GridMaster;
     // Start is called before the first frame update
     void Start()
