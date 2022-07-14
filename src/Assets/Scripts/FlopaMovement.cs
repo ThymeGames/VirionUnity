@@ -13,19 +13,15 @@ public class FlopaMovement : MonoBehaviour
     public Transform FlopaSwitch;
     public Transform FlySwitch;
 
-    public float shrink_y = 3;
-
-
-    
+    Animator anim;
     // bool isPressed = false;
     Rigidbody2D rb;
     float gravityScale;
-    Vector3 scale;
 
     void Awake() {
         rb = gameObject.GetComponent<Rigidbody2D>();
         gravityScale = rb.gravityScale;
-        scale = transform.localScale;
+        anim = gameObject.GetComponent<Animator>();
     }
 
     // Start is called before the first frame update
@@ -39,22 +35,17 @@ public class FlopaMovement : MonoBehaviour
     {
         if (transform.position.x < FlopaSwitch.position.x) {
             SwitchToFlopping();
-            transform.localScale = scale;
-
+            anim.SetBool("IsFlopping", true);
         }
         if (FlySwitch.position.x < transform.position.x) {
             SwitchToFlying();
-
-            Vector3 scale_new = scale;
-            scale_new.y /= shrink_y;
-            transform.localScale = scale_new;
-
+            anim.SetBool("IsFlopping", false);
         }
     }
 
     void OnTriggerEnter2D(Collider2D col) {
 
-        Debug.Log(col.gameObject.name);
+        // Debug.Log(col.gameObject.name);
 
         if (col.gameObject.name == "FlopaSwitch") {
             SwitchToFlopping();

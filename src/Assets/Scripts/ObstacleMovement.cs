@@ -6,7 +6,7 @@ public class ObstacleMovement : MonoBehaviour
 {
 
     public float velocity = 1f;
-    public float acceleration = 2f;
+    public float acceleration = 0.5f;
 
     // Start is called before the first frame update
     void Start()

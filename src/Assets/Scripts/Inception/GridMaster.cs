@@ -22,6 +22,18 @@ public class GridMaster : MonoBehaviour
         RefreshOccupation();
     }
 
+    public bool IsSolved() {
+
+        int j = 3;  // middle column
+        for (int i = 0; i < nRows; ++i) {
+            if (isOccupied[i, j]) {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
     void RefreshOccupation()
     {
 

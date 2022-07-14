@@ -5,7 +5,7 @@ using UnityEngine;
 public class SpawnObstacles : MonoBehaviour
 {
 
-    public List<GameObject> prefabs = new List<GameObject>();
+    public Transform ParentOfProteins;
     public float probaSpawn = 0.01f;
     public float cooldownMin = 1f, cooldownStart = 2f, cooldownDropSpeed = 1 / 30;
     public float destroyTimer = 5f;
@@ -13,10 +13,13 @@ public class SpawnObstacles : MonoBehaviour
     public float velocityMin = 0.01f, velocityMax = 0.03f;
     public float ymax = 1, ymin = -1;
     public float ystep = 0.18f;
+    public float acceleration = 1f;
 
     float cooldown;
     float timer = 0;
     float timerPersistent = 0;
+
+    public List<GameObject> prefabs = new List<GameObject>();
 
     void Awake() {
         cooldown = cooldownStart;
@@ -25,7 +28,10 @@ public class SpawnObstacles : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        foreach (Transform t in ParentOfProteins) {
+            Debug.Log("Add " + t.gameObject.name);
+            prefabs.Add(t.gameObject);
+        }
     }
 
     // Update is called once per frame
@@ -62,11 +68,13 @@ public class SpawnObstacles : MonoBehaviour
         );
 
         obj.transform.position = position;
-        obj.transform.Rotate(Vector3.forward * Random.Range(0, 4) * 90);
+        
+        // obj.transform.Rotate(Vector3.forward * Random.Range(0, 4) * 90);
 
         float velocity = velocityMin + (velocityMax - velocityMin) * Random.value;
         ObstacleMovement mov = obj.AddComponent<ObstacleMovement>();
         mov.velocity = velocity;
+        mov.acceleration = acceleration;
 
         obj.AddComponent<BoxCollider2D>();
 
