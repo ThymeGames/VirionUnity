@@ -14,7 +14,7 @@ public class LoadMenu : MonoBehaviour
     {
         timer += Time.deltaTime;
         if (timer > time_wait) {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 2);
+            SceneManager.LoadScene("Menu");
         }
     }
 }
