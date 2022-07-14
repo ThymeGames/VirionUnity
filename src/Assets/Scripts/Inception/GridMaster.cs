@@ -106,7 +106,7 @@ public class GridMaster : MonoBehaviour
             Vector2 point = ray.origin;
             Vector2Int indices = FindPointIndices(point);
             Debug.Log(point.ToString() + " " + indices.ToString());
-            Debug.Log("Occupation = " + isOccupied[indices.x, indices.y]);
+            // Debug.Log("Occupation = " + isOccupied[indices.x, indices.y]);
 
             if( Physics.Raycast( ray, out hit, 10 ) )
             {

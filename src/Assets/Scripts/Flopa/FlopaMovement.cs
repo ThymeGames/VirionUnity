@@ -29,6 +29,7 @@ public class FlopaMovement : MonoBehaviour
     {
         // SwitchToFlying();
         SwitchToFlopping();
+        rb.AddForce(Vector2.right, ForceMode2D.Impulse);
     }
 
     void Update()
