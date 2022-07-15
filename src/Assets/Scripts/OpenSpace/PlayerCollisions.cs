@@ -9,15 +9,31 @@ public class PlayerCollisions : MonoBehaviour
     // Start is called before the first frame update
     AudioManager audioManager;
 
+    float timer = 0f;
+    bool isDestroying = false;
+
+
     void Awake()
     {
-        audioManager = gameObject.GetComponent<AudioManager>();
+        audioManager = FindObjectOfType<AudioManager>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (isDestroying) {
+            timer += Time.deltaTime;
+
+            if (timer > destruct_time) {
+
+                Color c = gameObject.GetComponent<SpriteRenderer>().material.color;
+                c.a = 0;
+
+                gameObject.GetComponent<SpriteRenderer>().material.color = c;
+
+            }
+
+        }
     }
 
     void OnCollisionEnter2D(Collision2D col)
@@ -33,8 +49,8 @@ public class PlayerCollisions : MonoBehaviour
 
             gameObject.GetComponent<Collider2D>().enabled = false;
             audioManager.Play("Scream");
-            Destroy(gameObject, destruct_time);
-            // gameObject.GetComponent<Renderer>().material.color.a = 1.0f;
+
+            isDestroying = true;
         }
    
     }

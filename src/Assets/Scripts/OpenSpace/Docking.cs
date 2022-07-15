@@ -18,7 +18,7 @@ public class Docking : MonoBehaviour
     void Awake()
     {
         anim = gameObject.GetComponentInParent<Animator>();
-        audioManager = gameObject.GetComponent<AudioManager>();
+        audioManager = FindObjectOfType<AudioManager>();
     }
 
     // Update is called once per frame
@@ -54,9 +54,11 @@ public class Docking : MonoBehaviour
 
         if ((col.gameObject.tag == "BestCellEver") && !IsNicelyDocked()) {
             Debug.Log("oh my... here we are!");
-            audioManager.Play("Whistle");
+            audioManager.Play("RightDocking");
             _IsNicelyDocked = true;
             anim.Play("Docking", -1, 0f);
+            gameObject.GetComponent<ShutUpCamera>().ShutUp();
+            audioManager.Play("RightDocking");
         }
    
     }

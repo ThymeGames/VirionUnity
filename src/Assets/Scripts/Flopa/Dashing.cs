@@ -21,6 +21,7 @@ public class Dashing : MonoBehaviour
     {
         if (Input.GetKeyDown("right") && (count > 0)) {
             DoDash();
+            FindObjectOfType<AudioManager>().Play("Dash");
             Debug.Log("dashes left " + count.ToString());
         }
     }

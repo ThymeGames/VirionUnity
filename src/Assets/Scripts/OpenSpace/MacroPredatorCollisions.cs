@@ -11,6 +11,7 @@ public class MacroPredatorCollisions : MonoBehaviour
     public float darkness_offset = 1.5f;
 
     Animator anim;
+    AudioManager audioManager;
     float timer = 0;
     float timer_scene = 100000f;
     float timer_darkness = 1000000f;
@@ -19,6 +20,7 @@ public class MacroPredatorCollisions : MonoBehaviour
     void Start()
     {
         anim = gameObject.GetComponent<Animator>();
+        audioManager = FindObjectOfType<AudioManager>();
     }
 
     // Update is called once per frame
@@ -45,6 +47,9 @@ public class MacroPredatorCollisions : MonoBehaviour
         if (tag == "Player") {
 
             // Debug.Log("OnCollisionEnter2D  " + tag);
+
+            gameObject.GetComponent<ShutUpCamera>().ShutUp();
+            gameObject.GetComponent<AudioSource>().Stop();
 
             Vector3 pos = col.gameObject.transform.position;
             transform.position = pos;

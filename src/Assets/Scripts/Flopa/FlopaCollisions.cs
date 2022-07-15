@@ -12,6 +12,7 @@ public class FlopaCollisions : MonoBehaviour
                 bool success = gameObject.GetComponent<Dashing>().IncrementCount();
                 if (success) {
                     Destroy(col.gameObject);
+                    FindObjectOfType<AudioManager>().Play("Buff");
                 }
             }
         }

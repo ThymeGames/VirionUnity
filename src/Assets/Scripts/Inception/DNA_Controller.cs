@@ -28,7 +28,7 @@ public class DNA_Controller : MonoBehaviour
                 if (!isFinalStarted) {
 
                     Debug.Log("Start Final Animation");
-
+                    FindObjectOfType<AudioManager>().Play("Yep");
                     anim.Play("Solved", -1, 0f);
                     isFinalStarted = true;
                 }
@@ -36,7 +36,7 @@ public class DNA_Controller : MonoBehaviour
             } else {
 
                 Debug.Log("Animate this looser");
-
+                FindObjectOfType<AudioManager>().Play("Nope");
                 anim.Play("NotSolved", -1, 0f);
             }
 
