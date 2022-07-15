@@ -99,6 +99,7 @@ public class GridMaster : MonoBehaviour
             if( Physics.Raycast( ray, out hit, 10 ) )
             {
                 GameObject t = hit.transform.gameObject;
+                FindObjectOfType<AudioManager>().Play("prot_moving");
                 Debug.Log(t.name);
 
                 if (!proteins.Contains(t)) {

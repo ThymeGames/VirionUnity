@@ -17,14 +17,13 @@ public class UnderMouse : MonoBehaviour
         {
             Ray ray = Camera.main.ScreenPointToRay( Input.mousePosition );
             RaycastHit hit;
-            
+
             Debug.Log("Mouse clicked on: ...");
 
             if( Physics.Raycast( ray, out hit, 100 ) )
             {
                 Transform t = hit.transform;
                 Debug.Log(t.gameObject.name );
-
                 Bounds bounds = t.GetComponent<SpriteRenderer>().bounds;
 
                 Debug.Log("Bounds");

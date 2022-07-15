@@ -60,6 +60,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (IsImpulseReady()) {
             ApplyImpulse();
+            // FindObjectOfType<AudioManager>().Play("swimming");
         }
 
         timer += Time.deltaTime;

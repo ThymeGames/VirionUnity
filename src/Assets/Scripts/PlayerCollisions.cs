@@ -8,6 +8,7 @@ public class PlayerCollisions : MonoBehaviour
     public float destruct_time = 1.5f;
     // Start is called before the first frame update
     AudioManager audioManager;
+    public GameObject cam;
 
     void Awake()
     {
@@ -32,10 +33,15 @@ public class PlayerCollisions : MonoBehaviour
             rb.velocity *= 0;
 
             gameObject.GetComponent<Collider2D>().enabled = false;
+            AudioSource Pred_source = col.gameObject.GetComponent<AudioSource>();
+            Pred_source.Stop();
+
+            AudioSource source = cam.GetComponent<AudioSource>();
+            source.Stop();
+
             audioManager.Play("Scream");
             Destroy(gameObject, destruct_time);
             // gameObject.GetComponent<Renderer>().material.color.a = 1.0f;
         }
-   
     }
 }

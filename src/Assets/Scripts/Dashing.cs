@@ -20,6 +20,7 @@ public class Dashing : MonoBehaviour
     void Update()
     {
         if (Input.GetKeyDown("right") && (count > 0)) {
+            FindObjectOfType<AudioManager>().Play("Dash");
             DoDash();
             Debug.Log("dashes left " + count.ToString());
         }
@@ -34,6 +35,7 @@ public class Dashing : MonoBehaviour
         if (count < 4) {
             count++;
             Debug.Log("count is incremented: " + count.ToString());
+            FindObjectOfType<AudioManager>().Play("BuffPickup");
             return true;
         } else {
             Debug.Log("Ne lezet uzhe khvatit.");

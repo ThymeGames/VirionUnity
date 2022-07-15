@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 557316069295932622}
   - component: {fileID: 4668484959323949087}
   - component: {fileID: 6331242030937961957}
-  - component: {fileID: 8139578183750188107}
+  - component: {fileID: 6494321926147833656}
   m_Layer: 0
   m_Name: Butt
   m_TagString: Butt
@@ -72,9 +72,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b82e3841b54d349408eb7739ed6a4dcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  alpha_step: 0.01
   repulse: 5
   repulse_torque: 50
---- !u!114 &8139578183750188107
+--- !u!114 &6494321926147833656
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -83,13 +84,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 2813523658651553788}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e25a3e349768d4f58b9b3eb3b1421e59, type: 3}
+  m_Script: {fileID: 11500000, guid: 0220804e9ef7a4058ac706754dbf8670, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   sounds:
   - name: Batz
-    clip: {fileID: 8300000, guid: 151cde42ceb4e41758ce7ee365b824c2, type: 3}
-    volume: 1
+    clip: {fileID: 8300000, guid: 1e9c869a1b8e14df09ed21f55c70f950, type: 3}
+    volume: 0.762
+    pitch: 0
     source: {fileID: 0}
 --- !u!1 &4526177659991578801
 GameObject:
@@ -204,7 +206,6 @@ GameObject:
   - component: {fileID: 2757570734063186486}
   - component: {fileID: 6898006171395558055}
   - component: {fileID: 6898006171395558059}
-  - component: {fileID: 8906339856625556279}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -367,20 +368,3 @@ MonoBehaviour:
   impulse_cooldown: 0.5
   torque: 0.01
   impulse_offset: 0.2
---- !u!114 &8906339856625556279
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6898006171395558096}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e25a3e349768d4f58b9b3eb3b1421e59, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sounds:
-  - name: Scream
-    clip: {fileID: 8300000, guid: eec941a5fca534f4b876a762836b22cb, type: 3}
-    volume: 1
-    source: {fileID: 0}
