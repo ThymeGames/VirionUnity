@@ -24,7 +24,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 4593
+  controlID: 8317
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -86,7 +86,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 1
+    m_EnableMouseInput: 0
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
@@ -97,18 +97,18 @@ MonoBehaviour:
       y: 21
       width: 683
       height: 490
-    m_Scale: {x: 2, y: 2}
-    m_Translation: {x: 341.5, y: 245}
+    m_Scale: {x: 2.1014059, y: 2.1014059}
+    m_Translation: {x: 343.85767, y: 245}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -170.75
-      y: -122.5
-      width: 341.5
-      height: 245
+      x: -163.6322
+      y: -116.588615
+      width: 325.0205
+      height: 233.17723
     m_MinimalGUI: 1
   m_defaultScale: 2
   m_LastWindowPixelSize: {x: 1366, y: 1022}
@@ -141,7 +141,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 4594
+  controlID: 8318
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -166,7 +166,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 4595
+  controlID: 8319
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -226,7 +226,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: bef1feffae85ffffd688ffff4689ffff348cffff9698ffff4c99ffff4aa7ffff8ab7ffff72bfffff
+      m_ExpandedIDs: 14c6fdff92c6fdff9cc7fdffd2c7fdff04c8fdff7656feffc464feffbef1feffae85ffffd688ffff4689ffff348cffff9698ffff4c99ffff4aa7ffff8ab7ffff72bfffff142501002225010066250100
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -242,7 +242,7 @@ MonoBehaviour:
         m_IsRenaming: 0
         m_OriginalEventType: 11
         m_IsRenamingFilename: 0
-        m_ClientGUIView: {fileID: 0}
+        m_ClientGUIView: {fileID: 5}
       m_SearchString: 
     m_ExpandedScenes: []
     m_CurrenRootInstanceID: 0
@@ -524,9 +524,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 1.0216527, y: -0.04431192, z: 0.18811457}
+    m_Target: {x: -0.35498327, y: 0.09484585, z: -0.027526205}
     speed: 2
-    m_Value: {x: 1.0216527, y: -0.04431192, z: 0.18811457}
+    m_Value: {x: -0.35498327, y: 0.09484585, z: -0.027526205}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -577,9 +577,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 1.1900619
+    m_Target: 2.6225152
     speed: 2
-    m_Value: 1.1900619
+    m_Value: 2.6225152
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -673,21 +673,21 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets/UI
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/UI
   m_LastFoldersGridSize: 16
   m_LastProjectPath: /Users/andrey/Work/ThymeGames/VirionUnity/src
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: cc9c0000
-    m_LastClickedID: 40140
+    m_SelectedIDs: d49c0000
+    m_LastClickedID: 40148
     m_ExpandedIDs: 00000000aa9c0000ac9c0000ae9c0000b09c000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -1155,8 +1155,8 @@ MonoBehaviour:
     y: 0
     width: 449
     height: 895
-  m_MinSize: {x: 276, y: 71}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -1234,4 +1234,4 @@ MonoBehaviour:
     m_SaveData: []
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 64014
+  m_LastSelectedObjectID: 75028

@@ -517,6 +517,7 @@ GameObject:
   m_Component:
   - component: {fileID: 311525349}
   - component: {fileID: 311525348}
+  - component: {fileID: 311525350}
   m_Layer: 0
   m_Name: Arrows
   m_TagString: Untagged
@@ -565,7 +566,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 194cf7a80f4bb4921af248fdfb20ba62, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cfe577ce64bb640fbbee00c569c2e59d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -584,13 +585,31 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 311525347}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.017, y: 0.423, z: 0}
+  m_LocalPosition: {x: 0.035, y: 0.423, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &311525350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 311525347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0b70b1f4283d4ce5b9c930438e9a2cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeTime: 2
+  keys:
+  - up
+  - down
+  - right
+  all: 0
 --- !u!1 &316497679 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3209376607062152890, guid: e2d8aa0fd7db249b1a503e640d4d5bed, type: 3}
