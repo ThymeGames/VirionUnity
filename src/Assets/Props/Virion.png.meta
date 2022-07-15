@@ -903,8 +903,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      Virion_2: 118118759
       Virion_5: -1818040083
-      Virion_25: -481082502
       Virion_7: -2097554794
       Virion_10: -859472037
       Virion_24: 804388223
@@ -939,7 +939,7 @@ TextureImporter:
       Virion_16: -2127531838
       Virion_21: 1940265354
       Virion_14: -1660844318
-      Virion_2: 118118759
+      Virion_25: -481082502
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

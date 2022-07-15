@@ -21,9 +21,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Flopa.unity
     guid: 8faebb707e78f4707a7dc3511d59b873
   - enabled: 1
-    path: Assets/Scenes/ToBeContinued.unity
-    guid: 076cef7c483504b4792acb023d557268
-  - enabled: 1
     path: Assets/Scenes/Final.unity
     guid: a0f2ef52e9f3e4029b6deb43562d24f6
+  - enabled: 0
+    path: Assets/Scenes/ToBeContinued.unity
+    guid: 076cef7c483504b4792acb023d557268
   m_configObjects: {}
