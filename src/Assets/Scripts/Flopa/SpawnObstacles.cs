@@ -14,6 +14,8 @@ public class SpawnObstacles : MonoBehaviour
     public float ymax = 1, ymin = -1;
     public float ystep = 0.18f;
     public float acceleration = 1f;
+    public bool addCollider = true;
+    public bool randomRotation = false;
 
     float cooldown;
     float timer = 0;
@@ -69,14 +71,18 @@ public class SpawnObstacles : MonoBehaviour
 
         obj.transform.position = position;
         
-        // obj.transform.Rotate(Vector3.forward * Random.Range(0, 4) * 90);
+        if (randomRotation) {
+            obj.transform.Rotate(Vector3.forward * Random.Range(0, 4) * 90);
+        }
 
         float velocity = velocityMin + (velocityMax - velocityMin) * Random.value;
         ObstacleMovement mov = obj.AddComponent<ObstacleMovement>();
         mov.velocity = velocity;
         mov.acceleration = acceleration;
 
-        obj.AddComponent<BoxCollider2D>();
+        if (addCollider) {
+            obj.AddComponent<BoxCollider2D>();
+        }
 
         Destroy(obj, destroyTimer);
     }
