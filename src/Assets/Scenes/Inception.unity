@@ -266,10 +266,10 @@ AudioSource:
   m_GameObject: {fileID: 8350868}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 4794cd80a237f470cba6792f3bed6c36, type: 3}
+  OutputAudioMixerGroup: {fileID: -2475950290519006986, guid: f227be7300c1b3140af78a7616ce18d7, type: 2}
+  m_audioClip: {fileID: 8300000, guid: f21c700a4dbc56944912093bd5db62cc, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0
+  m_Volume: 0.223
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -1137,6 +1137,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_SendPointerHoverToParent: 1
   m_HorizontalAxis: Horizontal
   m_VerticalAxis: Vertical
   m_SubmitButton: Submit
@@ -1203,20 +1204,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e25a3e349768d4f58b9b3eb3b1421e59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  musicMixerGroup: {fileID: -2475950290519006986, guid: f227be7300c1b3140af78a7616ce18d7, type: 2}
+  soundEffectsMixerGroup: {fileID: 2319079009573608432, guid: f227be7300c1b3140af78a7616ce18d7, type: 2}
   sounds:
-  - name: prot_moving
-    clip: {fileID: 8300000, guid: 2be3b15911c4c4ccf844b77a62cd1152, type: 3}
-    volume: 1
+  - audioType: 0
+    name: prot_moving
+    clip: {fileID: 8300000, guid: 77e5044df09e74644937c5cf66428335, type: 3}
+    volume: 3
     pitch: 1
     source: {fileID: 0}
-  - name: Nope
-    clip: {fileID: 8300000, guid: c7fb3cb02e4f141f9add91f7cd96d787, type: 3}
-    volume: 1.67
+  - audioType: 0
+    name: Nope
+    clip: {fileID: 8300000, guid: 680ba96d7ba84be4ca57910120a11e39, type: 3}
+    volume: 3
     pitch: 1
     source: {fileID: 0}
-  - name: Yep
-    clip: {fileID: 8300000, guid: 3168b93b47f4a449f809f60c6b7284b2, type: 3}
-    volume: 1.67
+  - audioType: 0
+    name: Yep
+    clip: {fileID: 8300000, guid: c921221b2b04198499ef514e9169d492, type: 3}
+    volume: 3
     pitch: 1
     source: {fileID: 0}
 --- !u!4 &321467360
@@ -3349,6 +3355,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8350871}
     m_Modifications:
+    - target: {fileID: 2861979481252706309, guid: acf2cc6463c9f4bce87db6599269f457, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
+    - target: {fileID: 2861979481252706309, guid: acf2cc6463c9f4bce87db6599269f457, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
     - target: {fileID: 2861979481979154309, guid: acf2cc6463c9f4bce87db6599269f457, type: 3}
       propertyPath: m_RootOrder
       value: 0

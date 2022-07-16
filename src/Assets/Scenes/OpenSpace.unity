@@ -532,19 +532,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e25a3e349768d4f58b9b3eb3b1421e59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  musicMixerGroup: {fileID: -2475950290519006986, guid: f227be7300c1b3140af78a7616ce18d7, type: 2}
+  soundEffectsMixerGroup: {fileID: 2319079009573608432, guid: f227be7300c1b3140af78a7616ce18d7, type: 2}
   sounds:
-  - name: Scream
-    clip: {fileID: 8300000, guid: d447ac85f6bd2492b8b722ea837016ed, type: 3}
+  - audioType: 0
+    name: Scream
+    clip: {fileID: 8300000, guid: 78610bd6446ca8944953d09cf3d2e4d7, type: 3}
     volume: 1
     pitch: 1
     source: {fileID: 0}
-  - name: Batz
-    clip: {fileID: 8300000, guid: 1e9c869a1b8e14df09ed21f55c70f950, type: 3}
+  - audioType: 0
+    name: Batz
+    clip: {fileID: 8300000, guid: d0f346addbd9bfb41bdb59db331185a6, type: 3}
     volume: 1
     pitch: 1
     source: {fileID: 0}
-  - name: RightDocking
-    clip: {fileID: 8300000, guid: c90e942d653714683a22d1ad7019762c, type: 3}
+  - audioType: 0
+    name: RightDocking
+    clip: {fileID: 8300000, guid: e8fce8ff36ce175498978d6dbed8aa4d, type: 3}
     volume: 3
     pitch: 1
     source: {fileID: 0}
@@ -696,12 +701,12 @@ AudioSource:
   m_GameObject: {fileID: 519420028}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 784c1a8497f534dc49772179e4fc2be1, type: 3}
+  OutputAudioMixerGroup: {fileID: 2319079009573608432, guid: f227be7300c1b3140af78a7616ce18d7, type: 2}
+  m_audioClip: {fileID: 8300000, guid: 82424fe3ed2f02d4d87dc79077202e01, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -792,12 +797,12 @@ AudioSource:
   m_GameObject: {fileID: 519420028}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: f25f0de2ef9f940b383b79b6f0bf8107, type: 3}
+  OutputAudioMixerGroup: {fileID: -2475950290519006986, guid: f227be7300c1b3140af78a7616ce18d7, type: 2}
+  m_audioClip: {fileID: 8300000, guid: 2e7dc38d7a423b244a367450995f8998, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -1567,6 +1572,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_SendPointerHoverToParent: 1
   m_HorizontalAxis: Horizontal
   m_VerticalAxis: Vertical
   m_SubmitButton: Submit
@@ -1773,6 +1779,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2861979481252706309, guid: acf2cc6463c9f4bce87db6599269f457, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
+    - target: {fileID: 2861979481252706309, guid: acf2cc6463c9f4bce87db6599269f457, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
     - target: {fileID: 2861979481979154309, guid: acf2cc6463c9f4bce87db6599269f457, type: 3}
       propertyPath: m_RootOrder
       value: 10

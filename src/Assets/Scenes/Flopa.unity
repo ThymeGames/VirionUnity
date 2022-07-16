@@ -2372,19 +2372,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e25a3e349768d4f58b9b3eb3b1421e59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  musicMixerGroup: {fileID: -2475950290519006986, guid: f227be7300c1b3140af78a7616ce18d7, type: 2}
+  soundEffectsMixerGroup: {fileID: 2319079009573608432, guid: f227be7300c1b3140af78a7616ce18d7, type: 2}
   sounds:
-  - name: swim
-    clip: {fileID: 8300000, guid: 5d5a4468998f344a8b5bfab1fef7f8ab, type: 3}
+  - audioType: 0
+    name: swim
+    clip: {fileID: 8300000, guid: 99391e39815e83f4094062aa8bca073d, type: 3}
+    volume: 1.77
+    pitch: 1
+    source: {fileID: 0}
+  - audioType: 0
+    name: Dash
+    clip: {fileID: 8300000, guid: fa943c81ed15ab84896fb7d777d25863, type: 3}
     volume: 1
     pitch: 1
     source: {fileID: 0}
-  - name: Dash
-    clip: {fileID: 8300000, guid: 8d6bef6b7aa6e4fc3b83b926e57aeae8, type: 3}
-    volume: 1
-    pitch: 1
-    source: {fileID: 0}
-  - name: Buff
-    clip: {fileID: 8300000, guid: 8327269ec6f8245889b596185b4adc71, type: 3}
+  - audioType: 0
+    name: Buff
+    clip: {fileID: 8300000, guid: ec28f9206bebed448b4bab71e10b4c03, type: 3}
     volume: 1
     pitch: 1
     source: {fileID: 0}
@@ -2666,8 +2671,8 @@ AudioSource:
   m_GameObject: {fileID: 1257199675}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 784c1a8497f534dc49772179e4fc2be1, type: 3}
+  OutputAudioMixerGroup: {fileID: 2319079009573608432, guid: f227be7300c1b3140af78a7616ce18d7, type: 2}
+  m_audioClip: {fileID: 8300000, guid: f2709562419cdfb4b990b3cd5b70a3dc, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.7
   m_Pitch: 1
@@ -2762,8 +2767,8 @@ AudioSource:
   m_GameObject: {fileID: 1257199675}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 1323137fde094494090759bd9a51e3bd, type: 3}
+  OutputAudioMixerGroup: {fileID: -2475950290519006986, guid: f227be7300c1b3140af78a7616ce18d7, type: 2}
+  m_audioClip: {fileID: 8300000, guid: 22ec9590ceb34ef48a91dd7d9849c760, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -3761,6 +3766,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2861979481252706309, guid: acf2cc6463c9f4bce87db6599269f457, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
+    - target: {fileID: 2861979481252706309, guid: acf2cc6463c9f4bce87db6599269f457, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
     - target: {fileID: 2861979481979154309, guid: acf2cc6463c9f4bce87db6599269f457, type: 3}
       propertyPath: m_RootOrder
       value: 13
@@ -3925,6 +3938,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_SendPointerHoverToParent: 1
   m_HorizontalAxis: Horizontal
   m_VerticalAxis: Vertical
   m_SubmitButton: Submit
