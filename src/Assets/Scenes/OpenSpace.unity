@@ -991,6 +991,7 @@ MonoBehaviour:
   height: 50
   scale: 0.9
   n_trials_max: 3
+  avoidCenterSize: {x: 0.5, y: 0.5, z: 0}
 --- !u!114 &780613054
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1015,6 +1016,7 @@ MonoBehaviour:
   height: 30
   scale: 0.3
   n_trials_max: 3
+  avoidCenterSize: {x: 0, y: 0, z: 0}
 --- !u!114 &780613055
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1039,6 +1041,7 @@ MonoBehaviour:
   height: 40
   scale: 0.5
   n_trials_max: 3
+  avoidCenterSize: {x: 0, y: 0, z: 0}
 --- !u!1 &1064085801
 GameObject:
   m_ObjectHideFlags: 0

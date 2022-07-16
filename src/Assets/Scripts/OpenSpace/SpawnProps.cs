@@ -16,6 +16,9 @@ public class SpawnProps : MonoBehaviour
 
     public int n_trials_max = 5;
 
+    public Vector3 avoidCenterSize = new Vector3(0.5f, 0.5f);
+    Bounds avoidCenter;
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -41,12 +44,23 @@ public class SpawnProps : MonoBehaviour
                 }
             }
         }
+
+        avoidCenter = new Bounds(Vector3.zero, avoidCenterSize);
+
     }
+
+
+    bool isInsideCenter(GameObject prop) {
+        Bounds bounds = prop.GetComponent<SpriteRenderer>().bounds;
+        return bounds.Intersects(avoidCenter);
+    }
+
 
     bool CreateProp(GameObject pfProp) {
         for (int i_trial = 0; i_trial < n_trials_max; ++i_trial) {
             GameObject prop = ProposeProp(pfProp);
-            if (IsOverlappig(prop)) {
+            bool IsBadProp = IsOverlappig(prop) || isInsideCenter(prop);
+            if (IsBadProp) {
                 Destroy(prop);
             } else {
                 return true;
