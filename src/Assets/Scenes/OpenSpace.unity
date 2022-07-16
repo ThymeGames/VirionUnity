@@ -341,6 +341,10 @@ PrefabInstance:
       propertyPath: destruct_time
       value: 1.5
       objectReference: {fileID: 0}
+    - target: {fileID: 6898006171395558059, guid: ae90bc396261044d4ba866537a1d6950, type: 3}
+      propertyPath: torque
+      value: 0.03
+      objectReference: {fileID: 0}
     - target: {fileID: 6898006171395558062, guid: ae90bc396261044d4ba866537a1d6950, type: 3}
       propertyPath: m_RootOrder
       value: 1

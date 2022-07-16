@@ -19,7 +19,7 @@ public class Dashing : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown("right") && (count > 0)) {
+        if ((Input.GetKeyDown("right") || Input.GetKeyDown("d")) && (count > 0)) {
             DoDash();
             FindObjectOfType<AudioManager>().Play("Dash");
             Debug.Log("dashes left " + count.ToString());
