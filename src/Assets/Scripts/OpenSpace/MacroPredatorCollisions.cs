@@ -46,28 +46,18 @@ public class MacroPredatorCollisions : MonoBehaviour
         string tag = col.gameObject.tag;
         if (tag == "Player") {
 
-            // Debug.Log("OnCollisionEnter2D  " + tag);
-
-            gameObject.GetComponent<ShutUpCamera>().ShutUp();
-            gameObject.GetComponent<AudioSource>().Stop();
-
             Vector3 pos = col.gameObject.transform.position;
             transform.position = pos;
 
-            Rigidbody2D rb = gameObject.GetComponent<Rigidbody2D>();
-
-            rb.isKinematic = true;
-            rb.angularVelocity *= 0;
-            rb.velocity *= 0;
-
-            gameObject.GetComponent<Homing>().enabled = false;
-            // gameObject.GetComponent<MacroPredatorCollisions>().enabled = false;
-
-            gameObject.GetComponent<Rigidbody2D>().velocity *= 0f;
             anim.Play("Run", -1, 0f);
 
             timer_scene = timer + load_menu_offset;
             timer_darkness = timer + darkness_offset;
+
+            gameObject.GetComponent<ShutUpCamera>().ShutUp();
+            gameObject.GetComponent<AudioSource>().Stop();
+            gameObject.GetComponent<StopEverything>().Execute();
+            Destroy(gameObject.GetComponent<Homing>());
 
             // Debug.Log(timer_scene.ToString() + " " + timer_darkness.ToString());
 

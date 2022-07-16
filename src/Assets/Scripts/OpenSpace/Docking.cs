@@ -58,31 +58,13 @@ public class Docking : MonoBehaviour
             _IsNicelyDocked = true;
             anim.Play("Docking", -1, 0f);
             gameObject.GetComponent<ShutUpCamera>().ShutUp();
-            StopEveryThing();
+            gameObject.GetComponent<StopEverything>().Execute();
         }
    
     }
 
     public bool IsNicelyDocked() {
         return _IsNicelyDocked;
-    }
-    
-
-    void StopEveryThing() {
-
-        GameObject player = gameObject.transform.parent.gameObject;
-        GameObject predator = GameObject.FindWithTag("MacroPredator");
-        GameObject cell = GameObject.FindWithTag("BestCellEver");
-
-        List<GameObject> objs = new List<GameObject>{player, predator, cell};
-
-        foreach (GameObject obj in objs) {
-            Rigidbody2D rb = obj.GetComponent<Rigidbody2D>();
-            rb.constraints = RigidbodyConstraints2D.FreezeAll;
-        }
-
-        predator.GetComponent<AudioSource>().enabled = false;
-
     }
 
 }
